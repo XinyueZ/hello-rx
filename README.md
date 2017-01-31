@@ -10,7 +10,10 @@
 
 > For single element, data.
 
-For example: ```"1", "2","3","4","5","6".....```
+For example: 
+
+
+```"1", "2","3","4","5","6".....```
 
 ```java
 
@@ -39,7 +42,10 @@ For example: ```"1", "2","3","4","5","6".....```
 
 > For array with elements, data-group.
 
-For example: ```new String[]{"1", "2","3","4","5","6".....}```
+For example: 
+
+
+```new String[]{"1", "2","3","4","5","6".....}```
 
 ```java
 
@@ -115,7 +121,7 @@ instead the ```flatMap``` is ```1:n``` which means the original data scale to mo
 
 For example:
 
-You locate in a community. The community, ```the x``,  contains a lot houses. Your task is to input community and   output   hours-list of community, the  ```f(x)```.
+You locate in a community. The community, ```the x```,  contains a lot houses. Your task is to input community and   output   hours-list of community, the  ```f(x)```.
 
 The output is, ```y=f(f(x))```.
 
