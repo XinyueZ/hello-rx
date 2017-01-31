@@ -5,6 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.widget.TextView;
 
+import com.hellorx.api.Hello;
+import com.hellorx.api.Service;
+import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -15,6 +19,8 @@ import io.reactivex.functions.BiFunction;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -140,7 +146,6 @@ public class MainActivity extends AppCompatActivity {
 		          );
 
 
-
 		final Community newCommunity = new Community();
 		Observable.fromIterable(houseList)
 		          .subscribeOn(Schedulers.newThread())
@@ -169,6 +174,35 @@ public class MainActivity extends AppCompatActivity {
 
 		          );
 
+
+		Retrofit retrofit = new Retrofit.Builder().baseUrl("http://rest-service.guides.spring.io/")
+		                                          .addConverterFactory(GsonConverterFactory.create())
+		                                          .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+		                                          .build();
+		Service service = retrofit.create(Service.class);
+		service.greeting()
+		       .subscribeOn(Schedulers.io())
+		       .flatMap(new Function<Hello, Observable<String>>() {
+			       @Override
+			       public Observable<String> apply(Hello hello) throws Exception {
+				       return Observable.fromArray("id: " + hello.getId(), ", content: " + hello.getContent());//Notify for scale
+			       }
+		       })
+		       .observeOn(AndroidSchedulers.mainThread())
+		       .subscribe(new Consumer<String>() {
+			       @Override
+			       public void accept(String string) throws Exception {
+				       TextView textView = (TextView) findViewById(R.id.output_greeting_tv);
+				       String previous = textView.getText()
+				                                 .toString();
+				       if (TextUtils.isEmpty(previous)) {
+					       previous = "Greeting: ";
+				       }
+				       textView.setText(new StringBuilder().append(previous)
+				                                           .append(string)
+				                                           .append(""));
+			       }
+		       });
 	}
 
 }
@@ -229,3 +263,5 @@ class Community {
 		mHouseList.add(house);
 	}
 }
+
+
