@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
 		          );
 
 
-		final Community newCommunity = new Community();
+		Community newCommunity = new Community();
 		Observable.fromIterable(houseList)
 		          .subscribeOn(Schedulers.newThread())
 		          .reduce(newCommunity, new BiFunction<Community, House, Community>() {
