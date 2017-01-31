@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 		          .map(new Function<String, String>() {
 			          @Override
 			          public String apply(String s) throws Exception {
-				          return s.toUpperCase();
+				          return s.toUpperCase(); // Notify for transform 1:1
 			          }
 		          })
 		          .observeOn(AndroidSchedulers.mainThread())
@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
 		          .flatMap(new Function<Community, Observable<House>>() {
 			          @Override
 			          public Observable<House> apply(Community community) throws Exception {
-				          return Observable.fromIterable(community.getHouseList());
+				          return Observable.fromIterable(community.getHouseList());//Notify for scale
 			          }
 		          })
 		          .observeOn(AndroidSchedulers.mainThread())
@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
 		          .reduce(newCommunity, new BiFunction<Community, House, Community>() {
 			          @Override
 			          public Community apply(Community community, House house) throws Exception {
-				          community.addHouse(house);
+				          community.addHouse(house); //Notify for shrink
 				          return community;
 			          }
 		          })

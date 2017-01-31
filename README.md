@@ -1,6 +1,10 @@
 # Say hello to Rx-programming on Android
 
+
 > In this repo I introduce only common methods that used when people code with RxAndroid.
+
+
+## General expression
 
 ### just:
 
@@ -45,5 +49,9 @@ For example:
 You have a lot houses, the list of object ``` a, b, c....`` and you want to build a community ```y```.
 
 The output is, ```y=f(a, b, c.....)```.
+
+## With Retrofit
+
+
 
 
