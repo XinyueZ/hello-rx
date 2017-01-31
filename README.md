@@ -4,7 +4,7 @@
 > In this repo I introduce only common methods that used when people code with RxAndroid.
 
 
-## General expression
+## General operator
 
 ### just:
 
