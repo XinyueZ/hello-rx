@@ -5,8 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.widget.TextView;
 
-import com.hellorx.api.Hello;
-import com.hellorx.api.Service;
+import com.google.gson.annotations.SerializedName;
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
 import java.util.ArrayList;
@@ -21,6 +20,7 @@ import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.http.GET;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -262,6 +262,34 @@ class Community {
 		}
 		mHouseList.add(house);
 	}
+}
+
+
+class Hello {
+	@SerializedName("id") private int mId;
+	@SerializedName("content") private String mContent;
+
+
+	public Hello(int id, String content) {
+		mId = id;
+		mContent = content;
+	}
+
+
+	public int getId() {
+		return mId;
+	}
+
+	public String getContent() {
+		return mContent;
+	}
+}
+
+interface Service {
+	@GET("greeting")
+	Observable<Hello> greeting();
+
+
 }
 
 
