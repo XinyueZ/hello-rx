@@ -8,12 +8,13 @@
 
 ### just:
 
-> For single element, data.
+> For single element(s), data, translate this operator into "*Just* now I input something..." .
+For Android-users I recommend to use ```fromArray``` instead.
 
 For example: 
 
 
-```"1", "2","3","4","5","6".....```
+```"1", "2","3","4","5","6".....```  ====> ```"1", "2","3","4","5","6".....``` 
 
 ```java
 
@@ -40,12 +41,12 @@ For example:
 
 ### fromArray:
 
-> For array with elements, data-group.
+> Load data from array or some other collection for elements, data-group.
 
 For example: 
 
 
-```new String[]{"1", "2","3","4","5","6".....}```
+```new String[]{"1", "2","3","4","5","6".....}``` ====> ```"1", "2","3","4","5","6".....``` 
 
 ```java
 
@@ -124,6 +125,8 @@ For example:
 You locate in a community. The community, ```the x```,  contains a lot houses. Your task is to input community and   output   hours-list of community, the  ```f(x)```.
 
 The output is, ```y=f(f(x))```.
+
+```Community``` ====> ```"House 1", "House 2","House 3","House 4","House 5","House 6".....``` 
 
 More details, see example codes.
 
@@ -235,6 +238,8 @@ For example:
 You have a lot houses, the list of object ``` a, b, c....`` and you want to build a community ```y```.
 
 The output is, ```y=f(a, b, c.....)```.
+
+ ```"House 1", "House 2","House 3","House 4","House 5","House 6".....```  ====> ```Community```
 
 ```java
 
