@@ -120,13 +120,13 @@ For example:
 ### flatMap:
 
 > "Transform", convert original data to another form, however, it wouldn't be transformed by ```1:1```  like ```1 -> one, 2 -> two```, y = f(x),
-instead the ```flatMap``` is ```1:n``` which means the original data scale to more information, the y = f(f(x)).
+instead the ```flatMap``` is ```1:n``` which means the original data scale to more information, the y = f(g(x)).
 
 For example:
 
 You locate in a community. The community, ```the x```,  contains a lot houses. Your task is to input community and   output   hours-list of community, the  ```f(x)```.
 
-The output is, ```y=f(f(x))```.
+The output is, ```y=f(g(x))```.
 
 ```Community``` ====> ```"House 1", "House 2","House 3","House 4","House 5","House 6".....``` 
 
