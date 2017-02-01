@@ -13,6 +13,7 @@ For Android-users I recommend to use ```fromArray``` instead.
 
 For example: 
 
+Only input something and output same, because we don't use any other operators.
 
 ```"1", "2","3","4","5","6".....```  ====> ```"1", "2","3","4","5","6".....``` 
 
@@ -45,6 +46,7 @@ For example:
 
 For example: 
 
+Only input something and output same, because we don't use any other operators.
 
 ```new String[]{"1", "2","3","4","5","6".....}``` ====> ```"1", "2","3","4","5","6".....``` 
 
