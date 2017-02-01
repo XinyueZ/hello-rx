@@ -204,7 +204,7 @@ More details, see example codes.
 
 		);
 
-		Community community = new Community(houseList);
+		Community community = new Community(houseList);//With a lot houses
 		Observable.fromArray(community)
 		          .subscribeOn(Schedulers.newThread())
 		          .flatMap(new Function<Community, Observable<House>>() {
