@@ -8,7 +8,7 @@
 
 ### just:
 
-> For single element(s), data, translate this operator into "*Just* now I input something..." .
+> For single element(s), data, translated by this operator into "*Just* now I input something..." .
 For Android-users I recommend to use ```fromArray``` instead.
 
 For example: 
