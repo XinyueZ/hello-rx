@@ -83,7 +83,7 @@ Only input something and output same, because we don't use any other operators.
 
 For example:
 
-```new String[]{"1", "2","3","4","5","6".....}``` ====> ```new String[]{"one", "two","three","four","five","six".....}```
+```new String[]{"one", "two","three","four","five","six".....}``` ====> ```new String[]{"ONE", "TWO","THREE","FOUR","FIVE","SIX".....}```
 
 ```java
 
@@ -233,13 +233,13 @@ More details, see example codes.
 ```
 ### reduce:
 
-> "Transform", *shrink* original data(always be collection) into another form, it would be like ```n:1``` which is reverse direction of ```flatMap```. y = f(a, b, c...) .
+> "Transform", *shrink* original data(always be collection) into another form, it would be like ```n:1``` which is reverse direction of ```flatMap```. y = f([1:n]) .
 
 For example:
 
 You have a lot houses, the list of object ``` a, b, c....`` and you want to build a community ```y```.
 
-The output is, ```y=f(a, b, c.....)```.
+The output is, ```y=f([1:n])```.
 
  ```"House 1", "House 2","House 3","House 4","House 5","House 6".....```  ====> ```Community```
 
