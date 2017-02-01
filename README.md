@@ -316,7 +316,7 @@ The output is, ```y=f([1:n])```.
 		);
 		
 		
-				Community newCommunity = new Community();
+				Community newCommunity = new Community();//Empty.
         		Observable.fromIterable(houseList)
         		          .subscribeOn(Schedulers.newThread())
         		          .reduce(newCommunity, new BiFunction<Community, House, Community>() {
