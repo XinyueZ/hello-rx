@@ -14,7 +14,7 @@ No-math: what input will be transformed into other form as output.
 ### just:
 
 > For single element(s), data, translated by this operator into "*Just* now I input something..." .
-For Android-users I recommend to use ```fromArray``` instead.
+For Android-users I recommend to use ```fromArray``` instead, the ```just``` would be deprecated.
 
 For example: 
 
