@@ -3,6 +3,11 @@
 
 > In this repo I introduce only common methods that used when people code with RxAndroid.
 
+## Rx in Math
+
+The idea of Rx is based on math-model ```y=f(x)``` .
+
+No-math: what input will be transformed into other form as output.
 
 ## General operators
 
