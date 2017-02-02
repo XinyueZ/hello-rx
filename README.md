@@ -129,7 +129,7 @@ instead the ```flatMap``` is ```1:n``` which means the original data scale to mo
 
 For example:
 
-You locate in a community. The community, ```the x```,  contains a lot houses. Your task is to input community and   output   hours-list of community, the  ```f(x)```.
+You locate in a community. The community, ```the x```,  contains a lot houses. Your task is to input community and   output   house-list of community, the  ```f(x)```.
 
 The output is, ```y=f(g(x))```.
 
