@@ -22,7 +22,7 @@ Only input something and output same, because we don't use any other operators.
 
 ```"1", "2","3","4","5","6".....```  ====> ```"1", "2","3","4","5","6".....``` 
 
-```java
+```
 
 		Observable.just("one", "two", "three", "four", "five")
 		          .subscribeOn(Schedulers.newThread())
@@ -55,7 +55,7 @@ Only input something and output same, because we don't use any other operators.
 
 ```new String[]{"1", "2","3","4","5","6".....}``` ====> ```"1", "2","3","4","5","6".....``` 
 
-```java
+```
 
 		Observable.fromArray(new String[] { "one",
 		                                    "two",
@@ -90,7 +90,7 @@ For example:
 
 ```new String[]{"one", "two","three","four","five","six".....}``` ====> ```new String[]{"ONE", "TWO","THREE","FOUR","FIVE","SIX".....}```
 
-```java
+```
 
 		Observable.fromArray(new String[] { "one",
 		                                    "two",
@@ -137,7 +137,7 @@ The output is, ```y=f(g(x))```.
 
 More details, see example codes.
 
-```java
+```
 
         class House {
             private String mName;
@@ -248,7 +248,7 @@ The output is, ```y=f([1:n])```.
 
  ```"House 1", "House 2","House 3","House 4","House 5","House 6".....```  ====> ```Community```
 
-```java
+```
 
         class House {
             private String mName;
@@ -356,7 +356,7 @@ Use Retrofit to create ```Observable``` and do with operators instead using ```C
 
 
 For example: Call on http://rest-service.guides.spring.io/greeting
-```java
+```
 
 
         class Hello {
