@@ -20,7 +20,9 @@ For example:
 
 Only input something and output same, because we don't use any other operators.
 
-```"1", "2","3","4","5","6".....```  ====> ```"1", "2","3","4","5","6".....``` 
+```
+"1", "2","3","4","5","6".....```  ====> ```"1", "2","3","4","5","6".....
+``` 
 
 ```
 
@@ -53,7 +55,9 @@ For example:
 
 Only input something and output same, because we don't use any other operators.
 
-```new String[]{"1", "2","3","4","5","6".....}``` ====> ```"1", "2","3","4","5","6".....``` 
+```
+new String[]{"1", "2","3","4","5","6".....}``` ====> ```"1", "2","3","4","5","6".....
+``` 
 
 ```
 
@@ -88,7 +92,15 @@ Only input something and output same, because we don't use any other operators.
 
 For example:
 
-```new String[]{"one", "two","three","four","five","six".....}``` ====> ```new String[]{"ONE", "TWO","THREE","FOUR","FIVE","SIX".....}```
+```
+new String[]{"one", "two","three","four","five","six".....}
+``` 
+
+====> 
+
+```
+new String[]{"ONE", "TWO","THREE","FOUR","FIVE","SIX".....}
+```
 
 ```
 
@@ -122,6 +134,7 @@ For example:
 
 		          );
 ```
+
 ### flatMap:
 
 > "Transform", convert original data to another form, however, it wouldn't be transformed by ```1:1```  like ```1 -> one, 2 -> two```, y = f(x),
@@ -133,7 +146,15 @@ You locate in a community. The community, ```the x```,  contains a lot houses. Y
 
 The output is, ```y=f(g(x))```.
 
-```Community``` ====> ```"House 1", "House 2","House 3","House 4","House 5","House 6".....``` 
+```
+Community
+``` 
+
+====> 
+
+```
+"House 1", "House 2","House 3","House 4","House 5","House 6".....
+``` 
 
 More details, see example codes.
 
@@ -236,6 +257,7 @@ More details, see example codes.
 
 		          );
 ```
+
 ### reduce:
 
 > "Transform", *shrink* original data(always be collection) into another form, it would be like ```n:1``` which is reverse direction of ```flatMap```. y = f([1:n]) .
@@ -246,7 +268,15 @@ You have a lot houses, the list of object ``` a, b, c....`` and you want to buil
 
 The output is, ```y=f([1:n])```.
 
- ```"House 1", "House 2","House 3","House 4","House 5","House 6".....```  ====> ```Community```
+```
+"House 1", "House 2","House 3","House 4","House 5","House 6".....
+```  
+
+====> 
+
+```
+Community
+```
 
 ```
 
@@ -349,6 +379,7 @@ The output is, ```y=f([1:n])```.
         
         		          );
 ```
+
 ## With Retrofit2
 
 > This is not general manual for Retrofit2, for more information about it checkout [here](http://square.github.io/retrofit/) 
@@ -356,6 +387,7 @@ Use Retrofit to create ```Observable``` and do with operators instead using ```C
 
 
 For example: Call on http://rest-service.guides.spring.io/greeting
+
 ```
 
 
